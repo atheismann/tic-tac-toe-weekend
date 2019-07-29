@@ -24,15 +24,9 @@ h1 {
 td {
     height: 150px;
     width: 150px;
+    text-align: center;
+    font-size: 48px;
 }
-
-td div {
-    margin: 0 auto;
-    height: 50px;
-    width: 50px;
-    border-radius: 50%;
-}
-
 td.c1 {
     border-right: 4px dashed black;
 }

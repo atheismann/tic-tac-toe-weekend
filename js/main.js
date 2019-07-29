@@ -1,8 +1,8 @@
 /*---- Constants ----*/
 const PLAYERS = {
-    "null" : "white",
-    "1" : "red",
-    "-1" : "blue",
+    "null" : "",
+    "1" : "X",
+    "-1" : "O",
 }
  const WINNING_COMBOS = [
     [0,1,2],
@@ -20,7 +20,7 @@ let board, turn, winner;
 
 /*---- Cached element references ----*/
 const msgEl = document.getElementById('msg');
-const sqEl = document.querySelectorAll('td div');
+const sqEl = document.querySelectorAll('td');
 
 /*---- Event listeners ----*/
 document.querySelector('.game-board').addEventListener('click', handleClick);
@@ -40,16 +40,16 @@ function init() {
 
 function render() {
     board.forEach(function(sq, idx) {
-        sqEl[idx].style.background = PLAYERS[sq];
+        sqEl[idx].textContent = PLAYERS[sq];
     });
     if(winner) {    
         if (winner === 'T'){
             msgEl.innerHTML = "Try Again, We Have A Tie!"
         } else {
-            msgEl.innerHTML = `<span style="color:${PLAYERS[winner]}">${PLAYERS[winner].toUpperCase()}</span> Wins!`;
+            msgEl.innerHTML = `${PLAYERS[winner].toUpperCase()} Wins!`;
         };
     } else { 
-        msgEl.innerHTML = `<span style="color:${PLAYERS[turn]}">${PLAYERS[turn].toUpperCase()}</span>'s Turn!`;
+        msgEl.innerHTML = `${PLAYERS[turn].toUpperCase()}'s Turn!`;
     };
 }
 
