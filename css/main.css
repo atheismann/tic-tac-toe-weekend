@@ -65,6 +65,6 @@ button {
 }
 
 button:hover {
-    background-color: azure;
+    background-color: white;
     color: black
 }
