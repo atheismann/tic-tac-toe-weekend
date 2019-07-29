@@ -23,7 +23,7 @@ const msgEl = document.getElementById('msg');
 const sqEl = document.querySelectorAll('td div');
 
 /*---- Event listeners ----*/
-document.querySelector('table').addEventListener('click', handleClick);
+document.querySelector('.game-board').addEventListener('click', handleClick);
 document.querySelector('button').addEventListener('click', init);
 
 /*---- Functions ----*/
